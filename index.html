@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroWaste - Bienvenue</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ZeroWaste\styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fridge.png">
+
+</head>
+<body class="bg-[#f8f7e6] font-lato">
+
+    <!-- Top Navigation -->
+    <header class="top-navigation">
+        <nav class="nav-links">
+            <a href="ZeroWaste\blank.html">ABOUT</a>
+            <a href="ZeroWaste\blank.html">SUPPORT</a>
+            <a href="ZeroWaste\blank.html">CONTACT</a>
+        </nav>        
+        <img src="images\logo.png" alt="Logo" class="logo" >
+        <div class="auth-buttons">
+            <button onclick="location.href='ZeroWaste/register.html';">Inscription</button>
+            <button onclick="location.href='ZeroWaste/login.html';">Connexion</button>
+        </div>        
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-section">
+        
+        <!-- Left Section -->
+        <section class="left-section">
+            <img src="images\fridge.png" alt="Fridge Icon" class="fridge-icon">
+            <h1 class="title">Bienvenue,</h1>
+            <p class="description">
+                ZeroWaste vous aide à gérer vos aliments, suivre les dates de péremption et suggérer des recettes pour réduire le gaspillage.
+                Consommez mieux, économisez temps et argent.
+            </p>
+        </section>
+
+        <!-- Right Section -->
+        <section class="right-section">
+            <img src="images\food.png" alt="Plate Icon" class="plate-icon" id="main-image">
+            <h2 class="feature-title" id="feature-title">Gestion des produits alimentaires</h2> <br><br>
+            <p class="feature-description" id="feature-description">
+                Gérez facilement votre réfrigérateur : ajoutez, modifiez ou supprimez des articles, en indiquant leur date d’expiration ou en
+                estimant les jours restants. ZeroWaste s’occupe du reste.
+            </p>
+
+            <!-- Vertical Icons Positioned Around the Circle -->
+            <div class="icon-container">
+                <img src="images\ai.png" alt="AI Icon" class="icon" id="icon1" style="--i:0;">
+                <img src="images\statistics.png" alt="Graph Icon" class="icon" id="icon2" style="--i:1;">
+                <img src="images\QR.png" alt="QR Icon" class="icon" id="icon3" style="--i:2;">
+            </div>
+        </section>
+    </main>
+
+    <script src="ZeroWaste\script.js"></script>
+</body>
+</html>

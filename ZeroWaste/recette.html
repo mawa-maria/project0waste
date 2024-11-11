@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recette</title>
+    <!-- Ajouter Tailwind CSS via CDN HTTPS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">    
+</head>
+<body class="bg-cream font-sans flex flex-col min-h-screen" style="background-color: rgba(248, 247, 230, 1);">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4" style="background-color: rgba(223, 241, 155, 0.23);">
+        <div class="flex items-center">
+            <img src="../images/logo1.png" alt="Logo" class="h-12 w-12">
+        </div>
+
+        <div class="hidden lg:flex items-center">
+            <img src="../images/0west.png" alt="centre" class="h-16 w-16">
+        </div>
+        
+        <div class="flex lg:hidden items-center space-x-4">
+            <img src="../images/parameter.png" id="mobile-parameter" alt="Paramètre" class="h-6 w-6 cursor-pointer" title="Paramètre">
+            <img src="../images/disconnect.png" id="mobile-disconnect" alt="Déconnexion" class="h-6 w-6 cursor-pointer" title="Déconnexion">
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-4">
+            <button id="desktop-parameter" class="flex items-center text-white bg-[#779b89] font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                Paramètre
+            </button>
+            <button id="desktop-disconnect" class="flex items-center text-white bg-[#779b89] font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                Déconnexion
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex justify-center mt-4">
+        <img src="../images/recettes.png" alt="Recette en haut" class="max-w-[80%] h-auto">
+    </div>
+
+    <main class="flex-grow mx-[10%] my-4 mb-8 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex justify-center mb-4 text-4xl font-bold text-[#a4c48a]">
+            Biscuits froissés au chocolat
+        </div>            
+        
+        <!-- Contenu de la recette -->
+        <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+
+            <div class="flex items-center space-x-4">
+                <img src="../images/recette1.png" alt="recette1" class="w-24 h-24 rounded-md shadow-md">
+                <p class="text-gray-700 text-lg">Découvrez la recette parfaite de biscuits froissés au chocolat.<br><a href="voirplus1.html" class="font-bold text-[#a4c48a]">voir plus..</a></p>
+            </div>
+        </div>
+    </main>
+
+    <main class="flex-grow mx-[10%] my-4 mb-8 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex justify-center mb-4 text-4xl font-bold text-[#a4c48a]">
+            Lasagne facile
+        </div>            
+        
+        <!-- Contenu de la recette -->
+        <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+            <div class="flex items-center space-x-4">
+                <img src="../images/recette2.png" alt="recette2" class="w-24 h-24 rounded-md shadow-md">
+                <p class="text-gray-700 text-lg">Faire des lasagnes maison parfaites n’a pas besoin d’être fastidieux!<br><a href="voirplus2.html" class="font-bold text-[#a4c48a]">voir plus..</a></p>
+            </div>
+        </div>
+    </main>
+    <main class="flex-grow mx-[10%] my-4 mb-32 bg-white rounded-lg shadow-lg p-6">
+        <div class="flex justify-center mb-4 text-4xl font-bold text-[#a4c48a]">
+            Tacos au poisson
+        </div>            
+        
+        <!-- Contenu de la recette -->
+        <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
+            <div class="flex items-center space-x-4">
+                <img src="../images/recette3.png" alt="recette3" class="w-24 h-24 rounded-md shadow-md">
+                <p class="text-gray-700 text-lg">Vous n’avez pas besoin de quitter votre maison pour déguster des tacos au poisson parfaits !<br><a href="voirplus3.html" class="font-bold text-[#a4c48a]">voir plus..</a></p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 flex flex-col justify-center items-center p-4 fixed bottom-0 left-0 w-full" style="background-color: rgba(248, 247, 230, 0.9);">
+        <div class="flex justify-center items-center mb-4">
+            <button onclick="goToHistorique()" class="flex items-center bg-[#fbc043] font-lato font-bold text-sm rounded-full px-6 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#e0a938] transition-shadow">
+                <span>Historique </span>
+                <img src="../images/historique.png" alt="historique" class="ml-2 w-6 h-6">
+            </button>
+        </div>
+        <div class="flex justify-around w-full">
+            <button onclick="goToGestion()"class="flex items-center text-white bg-[#779b89] font-lato font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                <span>Gestion</span>
+                <img src="../images/recette.png" alt="Recette" class="ml-2 w-6 h-6">
+            </button>
+            <button onclick="goToDashboard()" class="flex items-center text-white bg-[#779b89] font-lato font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                <span>Dashboard</span>
+                <img src="../images/dashboard.png" alt="Dashboard" class="ml-2 w-6 h-6">
+            </button>
+        </div>
+    </footer>
+
+    <script>
+
+        // Redirection vers la page Paramètres pour mobile et desktop
+        document.getElementById('mobile-parameter').onclick = function() {
+            window.location.href = 'Parametre.html';
+        };
+        document.getElementById('desktop-parameter').onclick = function() {
+            window.location.href = 'Parametre.html';
+        };
+
+        // Déconnexion (ici on simule la déconnexion avec une alerte, mais vous pouvez ajouter la logique de déconnexion réelle)
+        document.getElementById('mobile-disconnect').onclick = function() {
+            alert('Vous avez été déconnecté.');
+            // Ajoutez ici la logique réelle de déconnexion, par exemple, redirection vers la page de connexion
+            window.location.href = "login.html";
+        };
+        document.getElementById('desktop-disconnect').onclick = function() {
+            alert('Vous avez été déconnecté.');
+            // Ajoutez ici la logique réelle de déconnexion, par exemple, redirection vers la page de connexion
+            window.location.href = "login.html";
+        };
+
+
+        // Redirections vers les pages
+        function goToGestion() {
+            window.location.href = "gestion.html";
+        }
+    
+        function goToHistorique() {
+            window.location.href = "blank.html";
+        }
+    
+        function goToDashboard() {
+            window.location.href = "Dashboard.html";
+        }
+    </script>
+</body>
+</html>
