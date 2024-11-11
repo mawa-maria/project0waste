@@ -1,2 +1,0 @@
-# Tailwind
-Zero Waste website
