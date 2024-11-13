@@ -62,15 +62,16 @@
                 <img src="images/logo.png" alt="Logo Zero Waste" class="h-14 mx-auto">
             </div>
             <div class="flex space-x-4">
-                <button onclick="settings()"   id="settingsButton" class="rounded-button bg-green-200 font-lato flex items-center space-x-2">
+                <button onclick="settings()"   id="settingsButton" class="rounded-button bg-green-200 font-lato flex items-center space-x-2 px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
                     <img src="images/settings-icon.png" alt="Paramètre" class="icon-only"> <!-- Icône paramètre -->
                     <span class="button-text">Paramètre</span>
                 </button>
-                <button onclick="logout()"  id="logoutButton" class="rounded-button bg-green-200 font-lato flex items-center space-x-2">
+                <button onclick="logout()"  id="logoutButton" class="rounded-button bg-green-200 font-lato flex items-center space-x-2 px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
                     <img src="images/logout-icon.png" alt="Déconnexion" class="icon-only"> <!-- Icône déconnexion -->
                     <span class="button-text">Déconnexion</span>
                 </button>
             </div>
+            
           </header>
     <!-- Contenu principal -->
     <main class="w-full max-w-6xl p-6 space-y-12">
@@ -104,24 +105,26 @@
       </div>
       </div>
     </main>
-    <footer class="w-full max-w-full bg-cream flex justify-center items-center p-6">
-        <div class="flex space-x-12"> 
-            <!-- Bouton Gestion -->
-            <a href="gestion.html" class="rounded-button bg-green-200 text-white font-lato w-32 h-12 flex items-center justify-center shadow-lg ml-6">
-                Gestion
-            </a>
-            
-            <!-- Bouton Historique -->
-            <a href="historique.html" class="rounded-button bg-yellow-300 text-black font-lato w-32 h-12 flex items-center justify-center shadow-lg mb-8">
-                Historique
-            </a>
-            
-            <!-- Bouton Recette -->
-            <a href="recette.html" class="rounded-button bg-green-200 text-white font-lato w-32 h-12 flex items-center justify-center shadow-lg mr-6">
-                Recette
-            </a>
+    
+    <div class="h-15% border-t border-gray-200 flex flex-col justify-between py-2 fixed bottom-4 left-0 right-0 bg-white" style="height: 15%; background-color: rgba(248, 247, 230, 0.9);">
+        <div class="relative flex justify-center items-center h-full">
+            <button onclick="goToHistorique()" class="flex items-center bg-yellow-300 font-lato font-bold text-sm rounded-full px-6 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#e0a938] transition-shadow mb-2">
+                <span>Historique</span>
+                <img src="../images/historique.png" alt="historique" class="ml-2 w-6 h-6">
+            </button>
         </div>
-    </footer>
+        
+        <div class="flex justify-around mb-2">
+            <button onclick="goToGestion()" class="flex items-center text-white bg-green-200 font-lato font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                <span>Gestion</span>
+                <img src="../images/dashboard.png" alt="Recette" class="ml-2 w-6 h-6">
+            </button>
+            <button onclick="goToRecette()" class="flex items-center text-white bg-green-200 font-lato font-bold text-sm rounded-full px-4 py-2 shadow-[2px_2px_0px_#333333] hover:bg-[#688b7a] transition-shadow">
+                <span>Recette</span>
+                <img src="../images/recette.png" alt="Recette" class="ml-2 w-6 h-6">
+            </button>
+        </div>
+    </div>
     
     
     
@@ -299,7 +302,7 @@
             mobileLogoutIcon.classList.add("icon-only");
             document.querySelector("header .flex.space-x-4").appendChild(mobileLogoutIcon);
             mobileLogoutIcon.onclick = function() {
-                    window.location.href = "../../login.html";
+                    window.location.href = "login.html";
                 };
             
         }
@@ -323,13 +326,24 @@ adjustButtonDisplay();
 // Ajouter un écouteur d'événements pour détecter les changements de taille d'écran
 window.addEventListener("resize", adjustButtonDisplay);
         
-function settings() {
+       function settings() {
             
             window.location.href = "Parametre.html";
         }
         function logout() {
             
             window.location.href = "login.html";
+        }
+        function goToGestion() {
+            window.location.href = "gestion.html";
+        }
+    
+        function goToHistorique() {
+            window.location.href = "blank.html";
+        }
+    
+        function goToRecette() {
+            window.location.href = "recette.html";
         }
 
         
